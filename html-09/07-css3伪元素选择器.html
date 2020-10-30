@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* 权重是2 */
+        div::before {
+            /* 这个content是必须要写的 */
+            content: '我';
+            width: 30px;
+            height: 40px;
+            background-color: red;
+            display: inline-block;
+        }
+
+        div::after {
+            content: '小猪佩奇';
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        是
+    </div>
+    <img src="images/Snipaste_2020-06-19_17-01-59.png" alt="">
+</body>
+
+</html>

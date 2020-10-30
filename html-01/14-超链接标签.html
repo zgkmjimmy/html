@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>1.外部链接</h4>
+    <a href="http://www.qq.com" target="_blank">腾讯</a>
+    target 打开窗口的方式，默认是_self 当前窗口打开页面 _blank 新窗口打开页面
+
+    <h4>2.内部链接：网页内部页面之间的相互链接</h4>
+    <a href="09-图像标签.html" target="_blank">图像标签</a>
+
+    
+    <h4>3.空链接：#</h4>
+    <a href="#">空链接</a>
+
+    <h4>4.下载链接：地址链接的文件是.exe或者是zip等压缩包形式</h4>
+    <a href="test.zip" target="_blank">下载文件</a>
+
+    <h4>5.网页元素的链接</h4>
+    <a href="http://www.baidu.com" target="_blank"><img src="test.png"/></a>
+
+    <h4>6.锚点链接</h4>
+    <a href="#live">官方指南</a><br />
+
+    我们已经成功创建了第一个 Vue 应用！看起来这跟渲染一个字符串模板非常类似，但是 Vue 在背后做了大量工作。现在数据和 DOM 已经被建立了关联，所有东西都是响应式的。我们要怎么确认呢？打开你的浏览器的 JavaScript 控制台 (就在这个页面打开)，并修改 app.message 的值，你将看到上例相应地更新。
+
+    注意我们不再和 HTML 直接交互了。一个 Vue 应用会将其挂载到一个 DOM 元素上 (对于这个例子是 #app) 然后对其进行完全控制。那个 HTML 是我们的入口，但其余都会发生在新创建的 Vue 实例内部。
+    
+    除了文本插值，我们还可以像这样来绑定元素 attribute：
+    
+    <div id="app-2">
+      <span v-bind:title="message">
+        鼠标悬停几秒钟查看此处动态绑定的提示信息！
+      </span>
+    </div>
+    var app2 = new Vue({
+      el: '#app-2',
+      data: {
+        message: '页面加载于 ' + new Date().toLocaleString()
+      }
+    })
+    <p>这里我们遇到了一点新东西。你看到的 v-bind attribute 被称为指令。指令带有前缀 v-，以表示它们是 Vue 提供的特殊 attribute。可能你已经猜到了，它们会在渲染的 DOM 上应用特殊的响应式行为。在这里，该指令的意思是：“将这个元素节点的 title attribute 和 Vue 实例的 message property 保持一致”。</p>
+    
+    <p>如果你再次打开浏览器的 JavaScript 控制台，输入 app2.message = '新消息'，就会再一次看到这个绑定了 title attribute 的 HTML 已经进行了更新。</p>
+
+    <h3 id="live">官方指南</h3>
+    官方指南假设你已了解关于 HTML、CSS 和 JavaScript 的中级知识。如果你刚开始学习前端开发，将框架作为你的第一步可能不是最好的主意——掌握好基础知识再来吧！之前有其它框架的使用经验会有帮助，但这不是必需的。
+</body>
+</html>

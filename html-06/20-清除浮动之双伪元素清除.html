@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 双伪元素清除浮动 */
+        .clearfix:after,
+        .clearfix:before {
+            content: "";
+            display: table;
+
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            /* IE6、7 专有 */
+            *zoom: 1;
+        }
+
+        .box {
+            width: 900px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .damao {
+            float: left;
+            height: 200px;
+            width: 200px;
+            background-color: green;
+        }
+
+        .ermao {
+            float: left;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+
+    </div>
+    <div class="footer"></div>
+    <img src="images/Snipaste_2020-06-17_17-48-22.png" alt="">
+    <img src="images/Snipaste_2020-06-17_18-03-56.png" alt="">
+</body>
+
+</html>
